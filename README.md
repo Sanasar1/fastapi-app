@@ -5,14 +5,14 @@
 
 **Описание API:**
 1) POST /links/shorten - создает и возвращает сокращенную ссылку \
-   requestBody: {
-     url: str
-     expiresAt: datetime.datetime?
-     alias: str?
-   }
-   responseBody: {
-     url: str
-   }
+   requestBody: { \
+     url: str \
+     expiresAt: datetime.datetime? \
+     alias: str? \
+   } \
+   responseBody: { \
+     url: str \
+   } \
 
 2) GET /links/{short_url} - возвращает полную ссылку на основе короткой ссылки
    responseBody: {

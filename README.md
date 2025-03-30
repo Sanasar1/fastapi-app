@@ -4,7 +4,7 @@
 3) responseBody - тело ответа в формате JSON
 
 **Описание API:**
-1) POST /links/shorten - создает и возвращает сокращенную ссылку
+1) POST /links/shorten - создает и возвращает сокращенную ссылку \
    requestBody: {
      url: str
      expiresAt: datetime.datetime?

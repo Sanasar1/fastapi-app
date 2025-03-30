@@ -6,7 +6,7 @@
 **Описание API:**
 1) POST /links/shorten - создает и возвращает сокращенную ссылку \
    requestBody: { \
-         url: str \
+     url: str \
      expiresAt: datetime.datetime? \
      alias: str? \
    } \
@@ -14,12 +14,12 @@
      url: str \
    }
 
-2) GET /links/{short_url} - возвращает полную ссылку на основе короткой ссылки
+3) GET /links/{short_url} - возвращает полную ссылку на основе короткой ссылки
    responseBody: {
      url: str
    }
   
-3) GET /links/{short_url} - возвращает статистику короткой ссылки
+4) GET /links/{short_url} - возвращает статистику короткой ссылки
    responseBody {
      originalUrl: str
      visits: int
@@ -27,12 +27,12 @@
      createdAt: datetime.datetime
    }
 
-4) DELETE /links/{short_url} - удаляет короткую ссылку и возвращает длинную ссылку
+5) DELETE /links/{short_url} - удаляет короткую ссылку и возвращает длинную ссылку
    responseBody {
     url: str
    }
 
-5) PUT /links/{short_url} - обновляет короткую ссылку (заменяет длинную) и возвращает новую длинную ссылку
+6) PUT /links/{short_url} - обновляет короткую ссылку (заменяет длинную) и возвращает новую длинную ссылку
    requestBody: {
      url: str
    }
